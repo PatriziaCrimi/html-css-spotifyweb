@@ -5,27 +5,73 @@
     <title>Spotify - Web Player</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="https://open.scdn.co/cdn/images/favicon32.a19b4f5b.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="page-wrapper">
       <!-- ***************** Aside ***************** -->
       <aside>
-        PROVA ASIDE
+        <a class="logo" href="#">
+          <i class="fab fa-spotify"></i> <!-- Logo Spotify-->
+        </a>
+        <div class="search-buttons">
+          <a href="#">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-home"></i>
+          </a>
+          <a href="#">
+            <img src="img/library.png" alt="Library icon">
+          </a>
+        </div>
+        <div class="aside-bottom">
+          <a href="#">
+            <i class="far fa-arrow-alt-circle-down"></i>
+          </a>
+          <a href="#">
+            <i class="far fa-user"></i>
+          </a>
+        </div>
       </aside>
       <!-- ***************** Main ***************** -->
       <main>
         <!-- Nav -->
         <nav>
-          PROVA NAV
+          <a class="burger-menu" href="#">
+            <i class="fas fa-bars"></i>
+          </a>
+          <div id="nav-menu">
+            <ul>
+              <li>
+                <a href="#">In evidenza</a>
+              </li>
+              <li>
+                <a href="#">Podcast</a>
+              </li>
+              <li>
+                <a href="#">Classifiche</a>
+              </li>
+              <li>
+                <a href="#">Generi e mood</a>
+              </li>
+              <li>
+                <a href="#">Nuove uscite</a>
+              </li>
+              <li>
+                <a href="#">Scopri</a>
+              </li>
+            </ul>
+          </div>
         </nav>
         <!-- Main Section - Creato Per Te -->
         <section id="creato-per-te">
-          PROVA HEADER
+          PROVA SECTION 1
         </section>
         <!-- Main Section - Recently Played -->
         <section id="recently-played">
-          PROVA SECTION
+          PROVA SECTION 2
         </section>
       </main>
     </div>

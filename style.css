@@ -2,14 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  text-transform: uppercase;
 }
 
 #page-wrapper {
   width: 100%;
   height: calc(100vh - 80px);
   display: flex;
+}
 
-  background-color: red;
+/* Common rules */
+aside .logo,
+main .burger-menu {
+  font-size: 30px;
 }
 
 /******************  Aside ***************** */
@@ -17,13 +32,39 @@ aside {
   background-color: black;
   color: #fff;
   width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+aside .search-buttons,
+aside .aside-bottom  {
+  display: flex;
+  flex-direction: column;
+}
+
+aside .search-buttons > a > i,
+aside .aside-bottom > a > i {
+  font-size: 20px;
+}
+
+aside img {
+  background-color: #fff;
+  width: 20px;
+}
 /******************  Main ***************** */
 main {
   background-color: gold;
   height: 100%;
   flex-grow: 1;
+}
+
+main nav #nav-menu {
+  display: none;
+}
+
+main section #creato-per-te {
+
 }
 
 /****************** Footer ******************/
@@ -36,14 +77,25 @@ footer {
 /****************** Media Query ******************/
 
 /* Responsive - Breakpoint Tablet 768px */
-@media screen and (min-width 768px) {
+@media screen and (min-width: 768px) {
   aside {
     width: 200px;
   }
 }
 
 
-/* Responsive - Breakpoint Desktop 1200px */
-@media screen and (min-width 1200px) {
+/* Responsive - Breakpoint Desktop 992px */
+@media screen and (min-width: 992px) {
+  main nav .burger-menu {
+    display: none;
+  }
 
+  main nav #nav-menu {
+    display: block;
+    text-align: center;
+  }
+
+  main nav #nav-menu ul > li {
+    display: inline-block;
+  }
 }
