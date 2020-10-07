@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#page-wrapper {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+
+  background-color: red;
+}
+
+/******************  Aside ***************** */
+aside {
+  background-color: black;
+  color: #fff;
+  width: 80px;
+}
+
+/******************  Main ***************** */
+main {
+  background-color: gold;
+  height: 100%;
+  flex-grow: 1;
+}
+
+/****************** Footer ******************/
+footer {
+  background-color: #272727;
+  color: #fff;
+  height: 80px;
+}
+
+/****************** Media Query ******************/
+
+/* Responsive - Breakpoint Tablet 768px */
+@media screen and (min-width 768px) {
+  aside {
+    width: 200px;
+  }
+}
+
+
+/* Responsive - Breakpoint Desktop 1200px */
+@media screen and (min-width 1200px) {
+
+}
