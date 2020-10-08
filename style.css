@@ -42,11 +42,6 @@ h3 {
   clear: both;
 }
 
-aside #aside-top .logo > i,
-main nav > .burger-menu {
-  font-size: 30px;
-}
-
 /******************  Aside ***************** */
 aside {
   background-color: black;
@@ -66,9 +61,17 @@ aside a {
 }
 
 aside span {
-  color: #b3b3b3;
   font-size: 15px;
   font-weight: 600;
+}
+
+aside #aside-top .logo {
+  padding: 20px 0 40px 0;
+}
+
+aside #aside-top .logo > i {
+  font-size: 40px;
+  color: #fff;
 }
 
 aside #aside-top .logo > img {
@@ -81,19 +84,41 @@ aside #aside-bottom  {
   flex-direction: column;
 }
 
-#aside-top .search-buttons > a > i,
-#aside-bottom > a > i {
-  font-size: 20px;
-  color: #b3b3b3;
+#aside-top .search-buttons > a > i {
+  font-size: 25px;
+  padding: 10px 0;
+}
+
+#aside-top .search-buttons > a:last-child {
+  padding-top: 10px;
 }
 
 #aside-top .search-buttons img {
-  background-color: #fff;
-  width: 20px;
+  background-color: #b3b3b3;
+  width: 25px;
 }
 
 #aside-top .playlist img {
   width: 35px;
+  vertical-align: middle;
+}
+
+#aside-top .playlist span {
+  vertical-align: middle;
+}
+
+#aside-bottom > a:first-child {
+  border-bottom: 1px solid #b3b3b3;
+}
+
+#aside-bottom > a > i[class="far fa-arrow-alt-circle-down"] {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+#aside-bottom > a > i[class="far fa-user"] {
+  font-size: 30px;
+  padding-top: 15px;
 }
 
 /******************  Main ***************** */
@@ -103,6 +128,10 @@ main {
   float: left;
   width: calc(100% - 80px);
   overflow: auto;
+}
+
+main nav > .burger-menu {
+  font-size: 30px;
 }
 
 main nav #nav-menu {
@@ -140,10 +169,10 @@ main section#recently-played .playlist-container {
 /****************** Footer ******************/
 footer {
   background-color: #272727;
-  color: #fff;
+  color: #b3b3b3;
   height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -183,10 +212,6 @@ footer #volume-control {
     height: 150px;
   }
 
-  footer {
-    justify-content: space-between;
-  }
-
   .hidden-md {
     display: none;
   }
@@ -209,6 +234,15 @@ footer #volume-control {
 
   main nav #nav-menu ul > li {
     display: inline-block;
+  }
+
+  footer #footer-left .being-played {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  footer #footer-left .being-played > a {
+    display: block;
   }
 
   .hidden-lg {
