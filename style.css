@@ -42,8 +42,8 @@ h3 {
   clear: both;
 }
 
-aside .logo > i,
-main .burger-menu {
+aside #aside-top .logo > i,
+main nav > .burger-menu {
   font-size: 30px;
 }
 
@@ -57,16 +57,7 @@ aside {
   flex-shrink: 0;
   flex-direction: column;
   align-items: center;
-}
-
-aside .logo > img {
-  width: 140px;
-}
-
-aside .search-buttons,
-aside .aside-bottom  {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 aside a {
@@ -80,18 +71,28 @@ aside span {
   font-weight: 600;
 }
 
-aside .search-buttons > a > i,
-aside .aside-bottom > a > i {
+aside #aside-top .logo > img {
+  width: 140px;
+}
+
+aside #aside-top .search-buttons,
+aside #aside-bottom  {
+  display: flex;
+  flex-direction: column;
+}
+
+#aside-top .search-buttons > a > i,
+#aside-bottom > a > i {
   font-size: 20px;
   color: #b3b3b3;
 }
 
-aside .search-buttons img {
+#aside-top .search-buttons img {
   background-color: #fff;
   width: 20px;
 }
 
-aside .playlist img {
+#aside-top .playlist img {
   width: 35px;
 }
 
@@ -147,12 +148,12 @@ footer {
 /* Responsive - Breakpoint Tablet 768px md */
 @media screen and (min-width: 768px) {
   aside {
-    width: 200px;
+    width: 150px;
     align-items: flex-start;
   }
 
   main {
-    width: calc(100% - 200px);
+    width: calc(100% - 150px);
   }
 
   .hidden-md {
@@ -166,15 +167,24 @@ footer {
 
 /* Responsive - Breakpoint Desktop 992px lg */
 @media screen and (min-width: 992px) {
+  aside {
+    width: 200px;
+    align-items: flex-start;
+  }
+
+  main {
+    width: calc(100% - 200px);
+  }
+
+  main nav #nav-menu ul > li {
+    display: inline-block;
+  }
+
   .hidden-lg {
     display: none;
   }
 
   .show-lg {
     display: block;
-  }
-
-  main nav #nav-menu ul > li {
-    display: inline-block;
   }
 }
