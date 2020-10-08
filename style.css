@@ -124,11 +124,12 @@ main section#recently-played .playlist-container {
 .playlist-container > .song-container {
   text-align: center;
   padding: 20px;
+  flex-grow: 1;
 }
 
 .playlist-container > .song-container img {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
 }
 
@@ -141,8 +142,29 @@ footer {
   background-color: #272727;
   color: #fff;
   height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
+footer #footer-left a > img {
+  width: 60px;
+  vertical-align: middle;
+}
+
+#footer-left [class="far fa-heart"] {
+  vertical-align: middle;
+}
+
+footer #audio-reproduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer #volume-control {
+
+}
 /****************** Media Query ******************/
 
 /* Responsive - Breakpoint Tablet 768px md */
@@ -154,6 +176,15 @@ footer {
 
   main {
     width: calc(100% - 150px);
+  }
+
+  main .playlist-container > .song-container img {
+    width: 150px;
+    height: 150px;
+  }
+
+  footer {
+    justify-content: space-between;
   }
 
   .hidden-md {
@@ -186,5 +217,12 @@ footer {
 
   .show-lg {
     display: block;
+  }
+}
+
+/* Responsive - Breakpoint 1170px */
+@media screen and (min-width: 1170px) {
+  main .playlist-container > .song-container {
+    flex-grow: 0;
   }
 }
