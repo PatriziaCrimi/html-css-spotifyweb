@@ -9,29 +9,56 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="page-wrapper">
+    <div id="top-wrapper">
       <!-- ***************** Aside ***************** -->
       <aside>
         <a class="logo" href="#">
-          <i class="fab fa-spotify"></i> <!-- Logo Spotify-->
+          <i class="fab fa-spotify hidden-md"></i> <!-- Logo Spotify mobile-->
+          <img class="show-md" src="img/spotify_logo.png" alt="Logo Spotify"> <!-- Logo Spotify tablet-desktop-->
         </a>
         <div class="search-buttons">
           <a href="#">
-            <i class="fas fa-search"></i>
-          </a>
-          <a href="#">
             <i class="fas fa-home"></i>
+            <span class="show-md">Home</span>
           </a>
           <a href="#">
+            <i class="fas fa-search"></i>
+            <span class="show-md">Cerca</span>
+          </a>
+          <a ref="#">
             <img src="img/library.png" alt="Library icon">
+            <span class="show-md">La tua libreria</span>
+          </a>
+        </div>
+        <div class="recently-listened show-md">
+          <h3>Ascoltati di recente</h3>
+          <a href="#">Annie Lennox</a>
+          <a href="#">Metallica</a>
+          <a href="#">Anathema</a>
+          <a href="#">Linkin Park</a>
+          <a href="#">Evanescence</a>
+          <a href="#">Slipknot</a>
+          <a href="#">Gary Jules</a>
+        </div>
+        <div class="playlist show-md">
+          <h3>Playlist</h3>
+          <a href="#">
+            <img src="img/crea_playlist.png" alt="Crea playlist icon">
+            <span>Crea playlist</span>
+          </a>
+          <a href="#">
+            <img src="img/liked_songs.png" alt="Brani preferiti icon">
+            <span>Brani preferiti</span>
           </a>
         </div>
         <div class="aside-bottom">
           <a href="#">
             <i class="far fa-arrow-alt-circle-down"></i>
+            <span class="show-md">Install App</span>
           </a>
           <a href="#">
             <i class="far fa-user"></i>
+            <span class="show-md">Patrizia.Crimi</span>
           </a>
         </div>
       </aside>
@@ -39,10 +66,10 @@
       <main>
         <!-- Nav -->
         <nav>
-          <a class="burger-menu" href="#">
+          <a class="burger-menu hidden-lg" href="#">
             <i class="fas fa-bars"></i>
           </a>
-          <div id="nav-menu">
+          <div id="nav-menu" class="show-lg">
             <ul>
               <li>
                 <a href="#">In evidenza</a>
@@ -72,41 +99,75 @@
             <div class="playlist-container">
               <a class="song-container" href="#">
                 <img src="img/into_the_west.jpg" alt="Into the west cover">
-                <h3>Into The West</h3>
+                <h4>Into The West</h4>
               </a>
               <a class="song-container" href="#">
                 <img src="img/nothing_else_matters.jpg" alt="Nothing Else Matters cover">
-                <h3>Nothing Else Matters</h3>
+                <h4>Nothing Else Matters</h4>
               </a>
               <a class="song-container" href="#">
                 <img src="img/unforgiven_two.jpg" alt="Unforgiven II cover">
-                <h3>Unforgiven II</h3>
+                <h4>Unforgiven II</h4>
               </a>
               <a class="song-container" href="#">
                 <img src="img/untouchable.jpg" alt="Untouchable Part I cover">
-                <h3>Untouchable Part I</h3>
+                <h4>Untouchable Part I</h4>
               </a>
               <a class="song-container" href="#">
                 <img src="img/in_the_end.jpg" alt="In The End cover">
-                <h3>In The End</h3>
+                <h4>In The End</h4>
               </a>
               <a class="song-container" href="#">
                 <img src="img/my_immortal.jpg" alt="My Immortal cover">
-                <h3>My Immortal</h3>
+                <h4>My Immortal</h4>
               </a>
               <a class="song-container" href="#">
                 <img src="img/snuff.jpg" alt="Snuff cover">
-                <h3>Snuff</h3>
+                <h4>Snuff</h4>
               </a>
               <a class="song-container" href="#">
                 <img src="img/mad_world.jpg" alt="Mad World cover">
-                <h3>Mad World</h3>
+                <h4>Mad World</h4>
               </a>
             </div>
           </section>
           <!-- Main Second Section - Recently Played -->
           <section id="recently-played">
-            PROVA SECTION 2
+            <h2>Recently Played</h2>
+            <div class="playlist-container">
+              <a class="song-container" href="#">
+                <img src="img/into_the_west.jpg" alt="Into the west cover">
+                <h4>Into The West</h4>
+              </a>
+              <a class="song-container" href="#">
+                <img src="img/nothing_else_matters.jpg" alt="Nothing Else Matters cover">
+                <h4>Nothing Else Matters</h4>
+              </a>
+              <a class="song-container" href="#">
+                <img src="img/unforgiven_two.jpg" alt="Unforgiven II cover">
+                <h4>Unforgiven II</h4>
+              </a>
+              <a class="song-container" href="#">
+                <img src="img/untouchable.jpg" alt="Untouchable Part I cover">
+                <h4>Untouchable Part I</h4>
+              </a>
+              <a class="song-container" href="#">
+                <img src="img/in_the_end.jpg" alt="In The End cover">
+                <h4>In The End</h4>
+              </a>
+              <a class="song-container" href="#">
+                <img src="img/my_immortal.jpg" alt="My Immortal cover">
+                <h4>My Immortal</h4>
+              </a>
+              <a class="song-container" href="#">
+                <img src="img/snuff.jpg" alt="Snuff cover">
+                <h4>Snuff</h4>
+              </a>
+              <a class="song-container" href="#">
+                <img src="img/mad_world.jpg" alt="Mad World cover">
+                <h4>Mad World</h4>
+              </a>
+            </div>
           </section>
         </div>
       </main>
