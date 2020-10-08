@@ -23,6 +23,9 @@ h2, h4 {
 h3 {
   text-transform: uppercase;
   color: #b3b3b3;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
 }
 
 .show-md,
@@ -33,7 +36,7 @@ h3 {
 #top-wrapper {
   width: 100%;
   height: calc(100vh - 80px);
-  display: flex;
+  /* display: flex; */
 }
 
 #top-wrapper::after {
@@ -47,12 +50,13 @@ aside {
   background-color: black;
   color: #b3b3b3;
   width: 80px;
+  height: 100%;
   float: left;
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  text-align: center;
 }
 
 aside a {
@@ -61,21 +65,17 @@ aside a {
 }
 
 aside span {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 aside #aside-top .logo {
-  padding: 20px 0 40px 0;
+  padding: 20px 0 30px 0;
 }
 
 aside #aside-top .logo > i {
   font-size: 40px;
   color: #fff;
-}
-
-aside #aside-top .logo > img {
-  width: 140px;
 }
 
 aside #aside-top .search-buttons,
@@ -96,6 +96,7 @@ aside #aside-bottom  {
 #aside-top .search-buttons img {
   background-color: #b3b3b3;
   width: 25px;
+  vertical-align: middle;
 }
 
 #aside-top .playlist img {
@@ -109,6 +110,7 @@ aside #aside-bottom  {
 
 #aside-bottom > a:first-child {
   border-bottom: 1px solid #b3b3b3;
+  margin: 0 10px;
 }
 
 #aside-bottom > a > i[class="far fa-arrow-alt-circle-down"] {
@@ -174,6 +176,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 footer #footer-left a > img {
@@ -199,12 +203,42 @@ footer #volume-control {
 /* Responsive - Breakpoint Tablet 768px md */
 @media screen and (min-width: 768px) {
   aside {
-    width: 150px;
-    align-items: flex-start;
+    width: 160px;
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  aside #aside-top .logo > img {
+    width: 125px;
+  }
+
+  #aside-top .search-buttons > a > span {
+    padding-left: 5px;
+  }
+
+  #aside-top .recently-listened {
+    padding: 30px 0 25px;
+  }
+
+  #aside-top .recently-listened > a {
+    padding: 0 0 5px 5px;
+    font-size: 14px;
+  }
+
+  #aside-top .playlist {
+    padding-bottom: 40px;
+  }
+
+  #aside-top .playlist > a {
+    margin-bottom: 10px;
+  }
+
+  #aside-bottom span {
+    padding-left: 5px;
   }
 
   main {
-    width: calc(100% - 150px);
+    width: calc(100% - 160px);
   }
 
   main .playlist-container > .song-container img {
@@ -226,6 +260,12 @@ footer #volume-control {
   aside {
     width: 200px;
     align-items: flex-start;
+    padding: 0 25px;
+  }
+
+  #aside-bottom > a:first-child {
+    margin: 0;
+    text-align: center;
   }
 
   main {
