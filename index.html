@@ -5,6 +5,7 @@
     <title>Spotify - Web Player</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="https://open.scdn.co/cdn/images/favicon32.a19b4f5b.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -18,9 +19,9 @@
             <img class="show-md" src="img/spotify_logo.png" alt="Logo Spotify"> <!-- Logo Spotify tablet-desktop-->
           </a>
           <div class="search-buttons">
-            <a href="#">
+            <a href="#" class="active-aside">
               <i class="fas fa-home"></i>
-              <span class="show-md">Home</span>
+              <span class="show-md active">Home</span>
             </a>
             <a href="#">
               <i class="fas fa-search"></i>
@@ -33,13 +34,29 @@
           </div>
           <div class="recently-listened show-md">
             <h3>Ascoltati di recente</h3>
-            <a href="#">Annie Lennox</a>
-            <a href="#">Metallica</a>
-            <a href="#">Anathema</a>
-            <a href="#">Linkin Park</a>
-            <a href="#">Evanescence</a>
-            <a href="#">Slipknot</a>
-            <a href="#">Gary Jules</a>
+            <ul>
+              <li>
+                <a href="#">Annie Lennox</a>
+              </li>
+              <li>
+                <a href="#">Metallica</a>
+              </li>
+              <li>
+                <a href="#">Anathema</a>
+              </li>
+              <li>
+                <a href="#">Linkin Park</a>
+              </li>
+              <li>
+                <a href="#">Evanescence</a>
+              </li>
+              <li>
+                <a href="#">Slipknot</a>
+              </li>
+              <li>
+                <a href="#">Gary Jules</a>
+              </li>
+            </ul>
           </div>
           <div class="playlist show-md">
             <h3>Playlist</h3>
@@ -74,7 +91,7 @@
           <div id="nav-menu" class="show-lg">
             <ul>
               <li>
-                <a href="#">In evidenza</a>
+                <a href="#" class="active-nav">In evidenza</a>
               </li>
               <li>
                 <a href="#">Podcast</a>

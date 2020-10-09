@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -26,13 +26,14 @@ h3 {
   text-transform: uppercase;
   color: #b3b3b3;
   font-size: 14px;
+  font-weight: 700;
   letter-spacing: 1px;
   padding-bottom: 15px;
 }
 
 h4 {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .show-md,
@@ -43,7 +44,6 @@ h4 {
 #top-wrapper {
   width: 100%;
   height: calc(100vh - 80px);
-  /* display: flex; */
 }
 
 #top-wrapper::after {
@@ -80,7 +80,7 @@ aside #aside-top .logo {
   padding-top: 20px;
 }
 
-aside #aside-top .logo > i {
+#aside-top .logo > i {
   font-size: 40px;
   color: #fff;
 }
@@ -97,7 +97,7 @@ aside #aside-bottom  {
 
 #aside-top .search-buttons > a > i {
   font-size: 25px;
-  padding: 10px 0;
+  padding: 10px 0 10px 5px;
 }
 
 #aside-top .search-buttons > a:last-child {
@@ -107,7 +107,24 @@ aside #aside-bottom  {
 #aside-top .search-buttons img {
   background-color: #b3b3b3;
   width: 25px;
+  margin-left: 5px;
   vertical-align: middle;
+}
+
+#aside-top .search-buttons > a:hover,
+#aside-bottom > a:hover {
+  color: #fff;
+  transition: 0.25s color;
+}
+
+#aside-top .search-buttons > a:last-of-type:hover img {
+  background-color: #fff;
+  transition: 0.25s background-color;
+}
+
+#aside-top .search-buttons .active-aside {
+  border-left: 3px solid #1db954;
+  color: #fff;
 }
 
 #aside-top .playlist img {
@@ -150,16 +167,40 @@ main {
 
 main nav > .burger-menu {
   font-size: 30px;
+  padding: 0 7px;
+  border-radius: 3px;
+}
+
+main nav > .burger-menu:hover {
+  box-shadow: 0px 0px 9px 1px rgba(171,166,171,1);
+  transition: 0.25s box-shadow ease-in-out;
 }
 
 main nav #nav-menu {
   text-align: center;
 }
 
-main nav #nav-menu li {
+main nav #nav-menu ul > li {
   text-transform: uppercase;
   font-size: 14px;
   padding: 0 10px;
+}
+
+main nav #nav-menu ul > li > a {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+main nav #nav-menu ul > li > a:hover::after,
+main nav #nav-menu .active-nav::after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid #1db954;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  transition: 0.25s all ease-in-out;
 }
 
 main .sections-container {
@@ -178,17 +219,31 @@ main section#creato-per-te .playlist-container {
   margin-bottom: 30px;
 }
 
-.playlist-container > .song-container {
+.playlist-container > a.song-container {
   text-align: center;
   padding: 15px;
   flex-grow: 1;
 }
 
-.playlist-container > .song-container img {
+.playlist-container > a.song-container img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
   margin-bottom: 5px;
+  transition: 0.3s all ease-in-out;
+}
+
+main .playlist-container > a.song-container:hover img {
+  width: 150px;
+  height: 150px;
+}
+
+main .playlist-container > a.song-container:hover h4 {
+  transition: 0.3s font-size ease-in-out;
+}
+
+main .playlist-container > a.song-container:hover h4 {
+  font-size: 17px;
 }
 
 /****************** Footer ******************/
@@ -202,6 +257,7 @@ footer {
   position: relative;
   z-index: 1;
   padding: 0 20px;
+  box-shadow: 0px -0.5px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 footer #footer-left a > img {
@@ -271,7 +327,7 @@ footer #volume-control > input[type="range"] {
   }
 
   h4 {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   aside {
@@ -296,7 +352,7 @@ footer #volume-control > input[type="range"] {
     padding: 45px 0 30px;
   }
 
-  #aside-top .recently-listened > a {
+  #aside-top .recently-listened ul li > a {
     padding: 0 0 5px 5px;
     font-size: 14px;
   }
@@ -306,24 +362,58 @@ footer #volume-control > input[type="range"] {
   }
 
   #aside-top .playlist > a {
-    margin-bottom: 10px;
+    padding: 0 0 10px 5px;;
+  }
+
+  #aside-top .playlist > a > img[alt^="Brani preferiti"] {
+    filter: opacity(80%);
+  }
+
+  #aside-top .playlist > a > span {
+    padding-left: 5px;
   }
 
   #aside-bottom span {
     padding-left: 5px;
   }
 
+  #aside-top .recently-listened ul li > a:hover,
+  #aside-top .playlist > a:hover,
+  #aside-bottom > a:hover {
+    color: #fff;
+    transition: 0.25s color;
+  }
+
+  #aside-top .playlist > a:hover img[alt^="Crea playlist"] {
+    filter: brightness(2);
+    transition: 0.25s filter ease-in-out;
+  }
+
+  #aside-top .playlist > a:hover img[alt^="Brani preferiti"] {
+    filter: opacity(100%);
+    transition: 0.25s filter ease-in-out;
+  }
+
   main {
     width: calc(100% - 160px);
   }
 
-  main .playlist-container > .song-container {
+  main .playlist-container > a.song-container {
     padding: 20px;
   }
 
-  main .playlist-container > .song-container img {
+  main .playlist-container > a.song-container img {
     width: 150px;
     height: 150px;
+  }
+
+  main .playlist-container > a.song-container:hover img {
+    width: 175px;
+    height: 175px;
+  }
+
+  main .playlist-container > a.song-container:hover h4 {
+    font-size: 19px;
   }
 
   .hidden-md {
@@ -337,6 +427,10 @@ footer #volume-control > input[type="range"] {
 
 /* Responsive - Breakpoint Desktop 992px lg */
 @media screen and (min-width: 992px) {
+  #top-wrapper {
+    height: calc(100vh - 100px);
+  }
+
   h2 {
     font-size: 40px;
   }
@@ -364,7 +458,7 @@ footer #volume-control > input[type="range"] {
     margin-top: 30px;
   }
 
-  main .playlist-container > .song-container {
+  main .playlist-container > a.song-container {
     padding: 25px 20px;
   }
 
@@ -385,6 +479,7 @@ footer #volume-control > input[type="range"] {
 
   #footer-left .being-played > a:first-child {
     font-size: 14px;
+    font-weight: 600;
   }
 
   #footer-left .being-played > a:last-child {
@@ -436,7 +531,7 @@ footer #volume-control > input[type="range"] {
 
 /* Responsive - Breakpoint 1170px */
 @media screen and (min-width: 1170px) {
-  main .playlist-container > .song-container {
+  main .playlist-container > a.song-container {
     flex-grow: 0;
   }
 }
