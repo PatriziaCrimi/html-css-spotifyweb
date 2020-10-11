@@ -185,7 +185,7 @@ main nav > .burger-menu {
 }
 
 main nav > .burger-menu:hover {
-  box-shadow: 0px 0px 9px 1px rgba(171,166,171,1);
+  box-shadow: 0px 0px 9px 1px rgba(102,99,102,0.69);
   transition: 0.25s box-shadow ease-in-out;
 }
 
@@ -269,7 +269,6 @@ footer {
   color: #b3b3b3;
   height: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -342,7 +341,7 @@ footer #audio-reproduction {
 }
 
 #audio-reproduction .audio-controls > i[class="far fa-pause-circle"]:hover {
-  font-size: 34px;
+  font-size: 30px;
 }
 
 i.active-audio {
@@ -380,6 +379,31 @@ i.active-audio {
   flex-grow: 1;
   margin-left: 10px;
   margin-right: 10px;
+  -webkit-appearance: none;
+  background-color: rgba(99, 99, 99, 0.8);
+  height: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#audio-reproduction .audio-bar > input[type="range"]:hover {
+  background-color: #1db954;
+  transition: 0.25s background-color;
+}
+
+#audio-reproduction .audio-bar > input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+#audio-reproduction .audio-bar > input[type="range"]::-moz-slider-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
 }
 
 #audio-reproduction .audio-bar::before {
@@ -509,6 +533,31 @@ i.active-audio {
 
   footer #volume-control > input[type="range"] {
     vertical-align: middle;
+    -webkit-appearance: none;
+    background-color: rgba(99, 99, 99, 0.8);
+    height: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  #volume-control > input[type="range"]:hover {
+    background-color: #1db954;
+    transition: 0.25s background-color;
+  }
+
+  #volume-control > input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  }
+
+  #volume-control > input[type="range"]::-moz-slider-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
   }
 
   .hidden-md {
@@ -606,6 +655,10 @@ i.active-audio {
     font-size: 32px;
   }
 
+  #audio-reproduction .audio-controls > i[class="far fa-pause-circle"]:hover {
+    font-size: 36px;
+  }
+
   #audio-reproduction .audio-bar::before {
     font-size: 15px;
   }
@@ -622,7 +675,7 @@ i.active-audio {
     padding-right: 5px;
   }
 
-  footer #volume-control > input[type="range"] {
+#volume-control > input[type="range"] {
     width: 150px;
   }
 
